@@ -7,6 +7,10 @@ module.exports = {
     'src/**/*.ts',
     '!src/**/*.d.ts'
   ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '\\.d\\.ts$'
+  ],
   coverageThreshold: {
     global: {
       branches: 100,
