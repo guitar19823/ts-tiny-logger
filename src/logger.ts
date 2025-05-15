@@ -63,7 +63,7 @@ export class Logger implements ILogger {
   }
 
   /**
-   * Format date and time to 'YYYY-MM-DD:hh-mm-ms' format
+   * Format date and time to 'YYYY-MM-DD:hh-mm-ss-ms' format
    * 
    * @param date - Date object to format
    * @returns Formatted date and time string
@@ -74,8 +74,9 @@ export class Logger implements ILogger {
     const day = String(date.getDate()).padStart(2, '0');
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
     const milliseconds = String(date.getMilliseconds()).padStart(3, '0');
     
-    return `${year}-${month}-${day}:${hours}-${minutes}-${milliseconds}`;
+    return `${year}-${month}-${day}:${hours}-${minutes}-${seconds}-${milliseconds}`;
   }
 } 

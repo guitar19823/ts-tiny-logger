@@ -54,7 +54,7 @@ describe('Logger', () => {
       expect(logs).toHaveLength(1);
       expect(logs[0].name).toBe('test-name');
       expect(logs[0].value).toBe('test-value');
-      expect(logs[0].dateTime).toMatch(/^\d{4}-\d{2}-\d{2}:\d{2}-\d{2}-\d{3}$/);
+      expect(logs[0].dateTime).toMatch(/^\d{4}-\d{2}-\d{2}:\d{2}-\d{2}-\d{2}-\d{3}$/);
     });
 
     it('should add multiple log entries', () => {
@@ -167,22 +167,22 @@ describe('Logger', () => {
   describe('formatDateTime', () => {
     it('should format date correctly', () => {
       const logger = Logger.getInstance('test');
-      const date = new Date(2023, 0, 15, 10, 30, 0, 123); // 2023-01-15 10:30:00.123
+      const date = new Date(2023, 0, 15, 10, 30, 45, 123); // 2023-01-15 10:30:45.123
       
       // @ts-ignore - Private method access for testing
       const formatted = logger.formatDateTime(date);
       
-      expect(formatted).toBe('2023-01-15:10-30-123');
+      expect(formatted).toBe('2023-01-15:10-30-45-123');
     });
 
     it('should pad values with leading zeros', () => {
       const logger = Logger.getInstance('test');
-      const date = new Date(2023, 0, 1, 1, 5, 0, 7); // 2023-01-01 01:05:00.007
+      const date = new Date(2023, 0, 1, 1, 5, 9, 7); // 2023-01-01 01:05:09.007
       
       // @ts-ignore - Private method access for testing
       const formatted = logger.formatDateTime(date);
       
-      expect(formatted).toBe('2023-01-01:01-05-007');
+      expect(formatted).toBe('2023-01-01:01-05-09-007');
     });
 
     it('should handle different months correctly', () => {
@@ -190,12 +190,12 @@ describe('Logger', () => {
       
       // Test each month (0-based index in JavaScript Date)
       for (let month = 0; month < 12; month++) {
-        const date = new Date(2023, month, 1, 12, 0, 0, 0);
+        const date = new Date(2023, month, 1, 12, 0, 30, 0);
         // @ts-ignore - Private method access for testing
         const formatted = logger.formatDateTime(date);
         const expectedMonth = String(month + 1).padStart(2, '0');
         
-        expect(formatted).toBe(`2023-${expectedMonth}-01:12-00-000`);
+        expect(formatted).toBe(`2023-${expectedMonth}-01:12-00-30-000`);
       }
     });
   });

@@ -14,7 +14,7 @@ npm install ts-tiny-logger
 - Log entries with name and value
 - Get all log entries
 - Clear log entries
-- Timestamp format: 'YYYY-MM-DD:hh-mm-ms'
+- Timestamp format: 'YYYY-MM-DD:hh-mm-ss-ms'
 
 ## Usage
 
@@ -32,8 +32,8 @@ logger1.log('user', 'User logged in');
 const logs = logger1.getLogs();
 console.log(logs);
 // [
-//   { dateTime: '2023-10-10:12-30-456', name: 'init', value: 'Application started' },
-//   { dateTime: '2023-10-10:12-31-789', name: 'user', value: 'User logged in' }
+//   { dateTime: '2023-10-10:12-30-25-456', name: 'init', value: 'Application started' },
+//   { dateTime: '2023-10-10:12-31-15-789', name: 'user', value: 'User logged in' }
 // ]
 
 // Create another logger instance with a different name
