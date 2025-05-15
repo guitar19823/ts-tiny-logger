@@ -1,9 +1,14 @@
 {
-  "name": "logger",
+  "name": "tiny-ts-logger",
   "version": "1.0.0",
-  "description": "A lightweight TypeScript logger package",
+  "description": "A lightweight TypeScript logger package with Flyweight pattern",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
@@ -15,9 +20,13 @@
   "keywords": [
     "logger",
     "typescript",
-    "logging"
+    "logging",
+    "flyweight",
+    "pattern",
+    "lightweight",
+    "tiny"
   ],
-  "author": "",
+  "author": "Alexey",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
@@ -27,5 +36,16 @@
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guitar19823/tiny-ts-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guitar19823/tiny-ts-logger/issues"
+  },
+  "homepage": "https://github.com/guitar19823/tiny-ts-logger#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }

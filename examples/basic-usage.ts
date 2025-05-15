@@ -1,5 +1,10 @@
 import { Logger } from '../src';
 
+// Only output logs to console when not in test environment
+if (process.env.NODE_ENV !== 'test') {
+  console.log('Tiny TS Logger Example:');
+}
+
 // Create an application logger
 const appLogger = Logger.getInstance('app');
 appLogger.log('init', 'Application started');
