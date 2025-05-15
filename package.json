@@ -1,5 +1,5 @@
 {
-  "name": "tiny-ts-logger",
+  "name": "ts-tiny-logger",
   "version": "1.0.0",
   "description": "A lightweight TypeScript logger package with Flyweight pattern",
   "main": "dist/index.js",
@@ -39,12 +39,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guitar19823/tiny-ts-logger.git"
+    "url": "git+https://github.com/guitar19823/ts-tiny-logger.git"
   },
   "bugs": {
-    "url": "https://github.com/guitar19823/tiny-ts-logger/issues"
+    "url": "https://github.com/guitar19823/ts-tiny-logger/issues"
   },
-  "homepage": "https://github.com/guitar19823/tiny-ts-logger#readme",
+  "homepage": "https://github.com/guitar19823/ts-tiny-logger#readme",
   "publishConfig": {
     "access": "public"
   }

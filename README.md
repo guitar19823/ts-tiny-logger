@@ -1,11 +1,11 @@
-# Tiny TS Logger
+# TS Tiny Logger
 
 A lightweight TypeScript logger package that can create multiple logger instances using the Flyweight pattern.
 
 ## Installation
 
 ```bash
-npm install tiny-ts-logger
+npm install ts-tiny-logger
 ```
 
 ## Features
@@ -19,7 +19,7 @@ npm install tiny-ts-logger
 ## Usage
 
 ```typescript
-import { Logger } from 'tiny-ts-logger';
+import { Logger } from 'ts-tiny-logger';
 
 // Create a logger instance
 const logger1 = Logger.getInstance('app');
