@@ -2,7 +2,7 @@
  * Interface for a log entry
  */
 export interface LogEntry {
-  /** Timestamp in format 'YYYY-MM-DD:hh-mm-ms' */
+  /** Timestamp in format 'YYYY-MM-DD:hh-mm-ss-ms' */
   dateTime: string;
   /** Name or category of the log entry */
   name: string;
